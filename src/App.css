@@ -1,0 +1,28 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --bg-light: #E6E6E6;
+    --bg-dark: #212121;
+    --tag-light: #A2A2A2;
+    --tag-dark: #555555;
+}
+
+.App {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    scroll-snap-points-y: repeat(100vh);    
+}
+
+.App::-webkit-scrollbar {
+    display: none;
+}
+
+.bg-light {
+    transition: 1s ease;
+    background-color: var(--bg-light);
+}
+
+.bg-dark {
+    transition: 1s ease;
+    background-color: var(--bg-dark);
+}

@@ -10,10 +10,6 @@ module.exports = {
         'sans': ['SpaceGrotesk']
       }
     },
-    colors: {
-      'light-back': '#E6E6E6',
-      'dark-back': '212121'
-    },
     screens: {
       'tablet': '640px',
       'laptop': '1024px',

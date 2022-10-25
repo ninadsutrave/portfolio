@@ -2,11 +2,12 @@ import React, { FC, ReactElement, useState } from 'react';
 import './App.css';
 
 //import sections
-import LandingPage from './pages/LandingPage'
-import Intro from './pages/Intro'
-import Work from './pages/Work'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
+import PageTemplate from './pages/PageTemplate'
+import LandingPage from './pages/content/LandingPage'
+import Intro from './pages/content/Intro'
+import Work from './pages/content/Work'
+import Projects from './pages/content/Projects'
+import Contact from './pages/content/Contact'
 
 //importing components
 import Heading from './components/Heading'
@@ -48,17 +49,23 @@ const App:FC = ():ReactElement => {
     <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll bg-${mode.modeType}`}>
 
       <img 
-        className= "fixed w-10 mt-4 ml-5 cursor-pointer z-10"
+        className= "fixed w-10 mt-4 ml-5 cursor-pointer z-20"
         alt="Bulb Icon"
         src={mode.iconUrl} 
         onClick={switchMode}
       />
-      <Heading />
-      <Navbar />
-      <Intro />
-      <Work />
-      <Projects />
-      <Contact />
+
+      <PageTemplate pageName="LandingPage" children={<LandingPage/>}/>
+
+      <div>
+        <Heading />
+        <Navbar/>
+        <PageTemplate pageName="Intro"    children={<Intro/>}     />
+        <PageTemplate pageName="Work"     children={<Work/>}      />
+        <PageTemplate pageName="Projects" children={<Projects/>}  />
+        <PageTemplate pageName="Contact"  children={<Contact/>}   />
+      </div>
+
       
     </div>
   );

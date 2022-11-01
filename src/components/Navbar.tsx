@@ -11,7 +11,7 @@ const Navbar: FC = (): ReactElement => {
         }
       }
 
-    return <div className="sticky hidden lg:flex justify-end top-1/6 h-screen w-9/12 ml-16 z-30">
+    return <div className="sticky hidden lg:flex justify-end top-1/6 h-screen w-9/12 ml-44 z-30">
         <div className="h-4/6 border-2 bg-black border-black">
         </div>
         <div className="h-4/6 flex flex-col items-center justify-around">

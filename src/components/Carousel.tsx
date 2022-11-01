@@ -25,25 +25,39 @@ export default function App() {
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
+        
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <a href="https://pehchaan.netlify.app" target="_blank" rel="noreferrer">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </a>
         </SwiperSlide>
+      
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <a href="https://teetsy.netlify.app" target="_blank" rel="noreferrer">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </a>
         </SwiperSlide>
+
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <a href="https://midday.netlify.app" target="_blank" rel="noreferrer">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </a>
         </SwiperSlide>
+
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <a href="https://chrome.google.com/webstore/detail/lookup-personal-vocabular/lamkbakfmcoaibacdbpgejffopbhhpgn?hl=en" target="_blank" rel="noreferrer">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </a>
         </SwiperSlide>
+
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          <a href="https://typemaster1234.netlify.app" target="_blank" rel="noreferrer">
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </a>
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
+
       </Swiper>
+      
     </>
   );
 }

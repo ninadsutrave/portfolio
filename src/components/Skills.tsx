@@ -14,8 +14,8 @@ const Skills: FC<Skillset> = ({type, list}: Skillset) => {
       </header>
       <p className="flex">
           {
-              list.map((skill) => {
-                  return <p className="mr-2">{skill}</p>
+              list.map((skill, index) => {
+                  return <span key={`skill-${index}`} className="mr-2">{skill}</span>
               })
           }
       </p>

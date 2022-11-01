@@ -40,10 +40,17 @@ const Contact: FC = (): ReactElement => {
       }, (error) => {
           console.log('Error');
       });
+
+    setFormDetails({
+      name: "",
+      email: "",
+      message: ""
+    })
+
   };
 
   return (
-    <div className="flex flex-col justify-center ml-8 gap-5 mb-8 lg:w-8/12 z-50">
+    <div className="flex flex-col justify-center ml-8 gap-5 mb-8 lg:w-8/12 z-30">
       <h1 className="text-xl font-black mt-4">
         Wanna make something awesome <br /> or just drop me a Hey?
       </h1>

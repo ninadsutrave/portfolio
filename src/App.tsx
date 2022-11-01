@@ -46,10 +46,10 @@ const App:FC = ():ReactElement => {
   }
 
   return (
-    <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll bg-${mode.modeType}`}>
+    <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll bg-gray-200 dark:bg-zinc-900 ${mode.modeType}`}>
 
       <img 
-        className= "fixed w-10 mt-4 ml-5 cursor-pointer z-20"
+        className= "fixed w-10 mt-4 ml-5 cursor-pointer z-50"
         alt="Bulb Icon"
         src={mode.iconUrl} 
         onClick={switchMode}

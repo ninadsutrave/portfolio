@@ -17,12 +17,12 @@
     display: none;
 }
 
-.bg-light {
+.light {
     transition: 1s ease;
     background-color: var(--bg-light);
 }
 
-.bg-dark {
+.dark {
     transition: 1s ease;
     background-color: var(--bg-dark);
 }

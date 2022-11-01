@@ -1,19 +1,19 @@
 import React, { FC, ReactElement } from 'react';
 import DownIcon from '../assets/images/double-down.svg';
 
-type Props = {
+type Page = {
     pageName: string;
     children?: JSX.Element | JSX.Element[];
 };
 
 let nextPage = new Map<string, string>([
-  ["LandingPage", "Intro"],
-  ["Intro", "Work"],
+  ["LandingPage", "Image"],
+  ["Image", "Work"],
   ["Work", "Projects"],
   ["Projects", "Contact"]
 ]);
 
-const PageTemplate: FC<Props> = ({pageName, children}: Props): ReactElement => {
+const PageTemplate: FC<Page> = ({pageName, children}: Page): ReactElement => {
 
   const scrollTo = (nextPage: string | undefined) => {
     if(nextPage) {
@@ -45,7 +45,7 @@ const PageTemplate: FC<Props> = ({pageName, children}: Props): ReactElement => {
         {
           (nextPage.has(pageName))?
           <a 
-            className="absolute bottom-0 mb-4 cursor-pointer"
+            className="absolute bottom-0 mb-4 cursor-pointer  z-40"
             href={`#${nextPage.get(pageName)}`}
             onClick = {() => scrollTo(nextPage.get(pageName))}
           >

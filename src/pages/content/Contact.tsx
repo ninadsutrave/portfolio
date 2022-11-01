@@ -21,6 +21,7 @@ const Contact: FC = (): ReactElement => {
 
   const ServiceID: string = process.env.REACT_APP_EMAILJS_SERVICE_ID!;
   const TemplateID: string = process.env.REACT_APP_EMAILJS_TEMPLATE_ID!;
+  
 
   const updateDetails = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
@@ -42,14 +43,14 @@ const Contact: FC = (): ReactElement => {
   };
 
   return (
-    <div className="flex flex-col justify-center ml-8 gap-5">
-      <h1 className="text-xl font-black">
+    <div className="flex flex-col justify-center ml-8 gap-5 mb-8 lg:w-8/12 z-50">
+      <h1 className="text-xl font-black mt-4">
         Wanna make something awesome <br /> or just drop me a Hey?
       </h1>
       <form className="flex flex-col gap-6" ref={form} onSubmit={sendEmail}>
             <p>
               <input 
-                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-5/12"
+                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-128"
                 type="text" 
                 name="name" 
                 value={formDetails.name}
@@ -61,7 +62,7 @@ const Contact: FC = (): ReactElement => {
             </p>
             <p>
               <input 
-                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-5/12"
+                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-128"
                 type="email" 
                 name="email" 
                 value={formDetails.email}
@@ -72,7 +73,7 @@ const Contact: FC = (): ReactElement => {
             </p>
             <p>
               <textarea 
-                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-5/12 resize-none"
+                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-128 resize-none"
                 name="message" 
                 value={formDetails.message}
                 placeholder="Message"
@@ -80,10 +81,10 @@ const Contact: FC = (): ReactElement => {
                 rows={5}
               />
             </p>
-            <div className="flex gap-14">
+            <div className="flex gap-14 ml-4">
               <p>
                 <input 
-                  className="py-2 px-8 rounded-lg font-black bg-neutral-400" 
+                  className="py-2 px-8 rounded-lg font-black bg-neutral-400 cursor-pointer" 
                   type="submit"
                   value="SEND"
                 />
@@ -92,21 +93,33 @@ const Contact: FC = (): ReactElement => {
                 OR
               </p>
               <p className="flex gap-2 justify-center items-center">
-                <a href="https://github.com/NinadSutrave">
+                <a 
+                  className="cursor-pointer"
+                  href="https://github.com/NinadSutrave"
+                  target="_blank" rel="noreferrer"
+                >
                   <img
                     className="w-10"
                     src={GithubLogo}
                     alt="Github Icon"
                   />
                 </a>
-                <a href="https://linkedin/in/ninadsutrave">
+                <a 
+                  className="cursor-pointer"
+                  href="https://www.linkedin.com/in/ninadsutrave/"
+                  target="_blank" rel="noreferrer"
+                >
                   <img
                     className="w-10"
                     src={LinkedinLogo}
                     alt="LinkedIn Icon"
                   />
                 </a>
-                <a href="https://instagram.com/ninadsutrave">
+                <a 
+                  className="cursor-pointer"
+                  href="https://instagram.com/ninadsutrave"
+                  target="_blank" rel="noreferrer"
+                >
                   <img
                     className="w-10"
                     src={InstagramLogo}

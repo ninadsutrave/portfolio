@@ -6,12 +6,12 @@ const Heading: FC = () => {
   const resumeLink : string | undefined = process.env.REACT_APP_RESUME_LINK;
 
   return (
-    <div className="sticky flex w-full bg-stone-200 top-0 pt-6 z-10">
+    <div className="sticky flex w-full bg-stone-200 top-0 pt-6 pb-6 z-10">
       <div className="w-1/3"></div>
       <div className="flex w-1/3 justify-center items-center">
         <span className="text-gray-500"> 
           &lt;Title&gt; 
-        </span>
+        </span> 
         <h2 className="mx-4 text-2xl font-bold">
           Ninad Sutrave
         </h2>

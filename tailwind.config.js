@@ -8,13 +8,12 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['SpaceGrotesk']
+      },
+      spacing: {
+        '1/6': '16.6%',
+        '128': '480px'
       }
-    },
-    screens: {
-      'tablet': '640px',
-      'laptop': '1024px',
-      'desktop': '1280px',
-    },
+    }
   },
   plugins: [],
 }

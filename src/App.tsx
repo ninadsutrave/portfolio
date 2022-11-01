@@ -60,7 +60,7 @@ const App:FC = ():ReactElement => {
       <div>
         <Heading />
         <Navbar/>
-        <PageTemplate pageName="Intro"    children={<Intro/>}     />
+        <PageTemplate pageName="Image"    children={<Intro/>}     />
         <PageTemplate pageName="Work"     children={<Work/>}      />
         <PageTemplate pageName="Projects" children={<Projects/>}  />
         <PageTemplate pageName="Contact"  children={<Contact/>}   />

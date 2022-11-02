@@ -45,7 +45,7 @@ const PageTemplate: FC<Page> = ({pageName, children}: Page): ReactElement => {
         {
           (nextPage.has(pageName))?
           <a 
-            className="absolute bottom-0 mb-4 cursor-pointer  z-30"
+            className="absolute bottom-0 mb-4 cursor-pointer z-30"
             href={`#${nextPage.get(pageName)}`}
             onClick = {() => scrollTo(nextPage.get(pageName))}
           >

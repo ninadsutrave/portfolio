@@ -22,11 +22,11 @@ const Intro: FC = (): ReactElement => {
 
           <div className="flex flex-col gap-8 sm:ml-4 md:ml-8">
 
-            <p className="sm:text-2xl md:text-3xl w-10/12">
+            <p className={`sm:text-2xl md:text-3xl w-10/12 dark:text-slate-50 ${localStorage.getItem("mode") === "dark"?"dark":"light"}`}>
               Hola!<br/>
               I love developing beautiful UIs & creating unique web experiences.
             </p>
-            <p className="sm:text-2xl md:text-3xl">
+            <p className={`sm:text-2xl md:text-3xl dark:text-slate-50 ${localStorage.getItem("mode") === "dark"?"dark":"light"}`}>
               Pleasure meeting you!
             </p>
 

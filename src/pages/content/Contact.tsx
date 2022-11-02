@@ -1,8 +1,11 @@
 import React, { useState, useRef, FC, ReactElement } from 'react';
 import emailjs from 'emailjs-com';
 import GithubLogo from '../../assets/images/github.svg';
+import GithubDarkLogo from '../../assets/images/github-dark.svg';
 import LinkedinLogo from '../../assets/images/linkedin.svg';
+import LinkedinDarkLogo from '../../assets/images/linkedin-dark.svg';
 import InstagramLogo from '../../assets/images/instagram.svg';
+import InstagramDarkLogo from '../../assets/images/instagram-dark.svg';
 
 const Contact: FC = (): ReactElement => {
 
@@ -51,13 +54,13 @@ const Contact: FC = (): ReactElement => {
 
   return (
     <div className="flex flex-col justify-center ml-8 gap-5 mb-8 lg:w-8/12 z-30">
-      <h1 className="text-xl font-black mt-4">
+      <h1 className="text-xl font-black mt-4 dark:text-slate-50">
         Wanna make something awesome <br /> or just drop me a Hey?
       </h1>
       <form className="flex flex-col gap-6" ref={form} onSubmit={sendEmail}>
             <p>
               <input 
-                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-128"
+                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black dark:border-slate-50 dark:placeholder:text-zinc-400 pl-5 pb-2 w-128"
                 type="text" 
                 name="name" 
                 value={formDetails.name}
@@ -69,7 +72,7 @@ const Contact: FC = (): ReactElement => {
             </p>
             <p>
               <input 
-                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-128"
+                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black dark:border-slate-50 dark:placeholder:text-zinc-400 pl-5 pb-2 w-128"
                 type="email" 
                 name="email" 
                 value={formDetails.email}
@@ -80,7 +83,7 @@ const Contact: FC = (): ReactElement => {
             </p>
             <p>
               <textarea 
-                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black pl-5 pb-2 w-128 resize-none"
+                className="bg-transparent placeholder:text-black focus:outline-none focus:placeholder:text-transparent border-b-2 border-black dark:border-slate-50 dark:placeholder:text-zinc-400 pl-5 pb-2 w-128 resize-none"
                 name="message" 
                 value={formDetails.message}
                 placeholder="Message"
@@ -91,47 +94,68 @@ const Contact: FC = (): ReactElement => {
             <div className="flex gap-14 ml-4">
               <p>
                 <input 
-                  className="py-2 px-8 rounded-lg font-black bg-neutral-400 cursor-pointer" 
+                  className="py-2 px-8 rounded-lg font-black bg-neutral-400 dark:bg-zinc-400 cursor-pointer" 
                   type="submit"
                   value="SEND"
                 />
               </p>
-              <p className="flex justify-center items-center font-black text-xl">
+              <p className="flex justify-center items-center font-black text-xl dark:text-gray-400">
                 OR
               </p>
-              <p className="flex gap-2 justify-center items-center">
+              <p className="flex gap-3 justify-center items-center">
                 <a 
                   className="cursor-pointer"
                   href="https://github.com/NinadSutrave"
                   target="_blank" rel="noreferrer"
                 >
-                  <img
-                    className="w-10"
-                    src={GithubLogo}
-                    alt="Github Icon"
-                  />
+                  {localStorage.getItem("mode") === "dark"?
+                    <img
+                      className="w-10"
+                      src={GithubLogo}
+                      alt="Github Icon"
+                    /> :
+                    <img
+                      className="w-10"
+                      src={GithubDarkLogo}
+                      alt="Github Icon"
+                    /> 
+                  }
                 </a>
                 <a 
                   className="cursor-pointer"
                   href="https://www.linkedin.com/in/ninadsutrave/"
                   target="_blank" rel="noreferrer"
                 >
-                  <img
-                    className="w-10"
-                    src={LinkedinLogo}
-                    alt="LinkedIn Icon"
-                  />
+                  {localStorage.getItem("mode") === "dark"?
+                    <img
+                      className="w-11"
+                      src={LinkedinLogo}
+                      alt="Linkedin Icon"
+                    /> :
+                    <img
+                      className="w-11"
+                      src={LinkedinDarkLogo}
+                      alt="Linkedin Icon"
+                    /> 
+                  }
                 </a>
                 <a 
                   className="cursor-pointer"
                   href="https://instagram.com/ninadsutrave"
                   target="_blank" rel="noreferrer"
                 >
-                  <img
-                    className="w-10"
-                    src={InstagramLogo}
-                    alt="Instagram Icon"
-                  />
+                  {localStorage.getItem("mode") === "dark"?
+                    <img
+                      className="w-9"
+                      src={InstagramLogo}
+                      alt="Instagram Icon"
+                    /> :
+                    <img
+                      className="w-9"
+                      src={InstagramDarkLogo}
+                      alt="Instagram Icon"
+                    /> 
+                  }
                 </a>
               </p>
 

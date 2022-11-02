@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useState } from 'react';
+import React, { FC, ReactElement, useState, useEffect } from 'react';
 import './App.css';
 
 //import sections
@@ -30,6 +30,10 @@ const App:FC = ():ReactElement => {
     iconUrl: `${BulbOn}`
   });
 
+  useEffect(() => {
+    localStorage.setItem("mode", mode.modeType);
+  }, [mode])
+
   const switchMode = () => {
     if(mode.modeType === "light") {
       setMode({
@@ -46,7 +50,7 @@ const App:FC = ():ReactElement => {
   }
 
   return (
-    <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll bg-gray-200 dark:bg-zinc-900 ${mode.modeType}`}>
+    <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll ${(mode.modeType === "light")? "bg-stone-200": "bg-zinc-900"} ${mode.modeType}`}>
 
       <img 
         className= "fixed w-10 mt-4 ml-5 cursor-pointer z-50"

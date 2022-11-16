@@ -1,9 +1,21 @@
 import React, { FC, ReactElement } from 'react';
-import DownIcon from '../assets/images/double-down.svg';
+
+interface modeData {
+  modeType: string;
+  bulbIcon: string;
+  downloadIcon: string;
+  doubleDownIcon: string;
+  githubIcon: string;
+  linkedinIcon: string;
+  instagramIcon: string;   
+  hamburgerIcon: string; 
+  crossIcon: string;
+}
 
 type Page = {
     pageName: string;
     children?: JSX.Element | JSX.Element[];
+    mode: modeData;
 };
 
 let nextPage = new Map<string, string>([
@@ -13,7 +25,7 @@ let nextPage = new Map<string, string>([
   ["Projects", "Contact"]
 ]);
 
-const PageTemplate: FC<Page> = ({pageName, children}: Page): ReactElement => {
+const PageTemplate: FC<Page> = ({pageName, children, mode}: Page): ReactElement => {
 
   const scrollTo = (nextPage: string | undefined) => {
     if(nextPage) {
@@ -50,7 +62,7 @@ const PageTemplate: FC<Page> = ({pageName, children}: Page): ReactElement => {
             onClick = {() => scrollTo(nextPage.get(pageName))}
           >
             <img
-              src={DownIcon}
+              src={mode.doubleDownIcon}
               alt="Bottom Nav Icon"
               className="w-6"
             />

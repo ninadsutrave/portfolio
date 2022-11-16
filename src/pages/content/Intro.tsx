@@ -4,23 +4,23 @@ import MyImage from '../../assets/images/me.jpg'
 const Intro: FC = (): ReactElement => {
 
   return (
-    <div className="flex ml-12 gap-12 lg:gap-0">
-      <div className="flex lg:w-80 items-center">
-        <div className="border border-black w-56">
+    <div className="flex flex-col sm:flex-row ml-4 lg:ml-12 sm:gap-20 lg:gap-0">
+      <div className="flex lg:w-80 items-center w-full sm:w-56">
+        <div className="border border-black mt-4 w-full max-w-xs sm:w-64 sm:h-full lg:mb-4">
           <img
-            className="border-slate-300 shadow-sm border-8"
+            className="border-slate-300 shadow-sm border-8 sm:h-full object-cover"
             src={MyImage}
             alt="Me"
           />
         </div>
       </div>
-      <div className="flex flex-col justify-center py-8 gap-4 lg:w-96">
+      <div className="flex flex-col sm:justify-center py-2 sm:py-8 gap-4 lg:w-96">
 
         <p className="text-gray-500">
             &lt; Intro &gt;
         </p>
 
-          <div className="flex flex-col gap-8 sm:ml-4 md:ml-8">
+          <div className="flex flex-col sm:gap-8 ml-2 sm:ml-4 md:ml-8">
 
             <p className={`sm:text-2xl md:text-3xl w-10/12 dark:text-slate-50 ${localStorage.getItem("mode") === "dark"?"dark":"light"}`}>
               Hola!<br/>

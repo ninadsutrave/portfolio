@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import ResumeDownloadButton from './ResumeDownloadButton';
-import cross from '../assets/images/cross.svg';
-import hamburger from '../assets/images/hamburger.svg';
 
-const Nav = () => {
+interface modeData {
+  modeType: string;
+  bulbIcon: string;
+  downloadIcon: string;
+  doubleDownIcon: string;
+  githubIcon: string;
+  linkedinIcon: string;
+  instagramIcon: string;   
+  hamburgerIcon: string; 
+  crossIcon: string;
+}
+
+const Nav:FC<modeData> = (mode) => {
     let Links =[
       {name:"Intro",link:"#Image"},
       {name:"Work",link:"#Work"},
@@ -27,18 +37,18 @@ const Nav = () => {
       <div className='lg:flex h-0 items-center justify-between bg-zinc-200 dark:bg-zinc-900 py-4 lg:px-10 px-7'>
       
       <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer lg:hidden'>
-      {open ? <img alt="close icon" src={cross}/>: <img alt="hamburger icon" src={hamburger}/>}
+      {open ? <img className="mt-3 mr-1 w-6" alt="close icon" src={mode.crossIcon}/>: <img className="mt-2 w-8" alt="hamburger icon" src={mode.hamburgerIcon}/>}
       </div>
 
       <ul className={`shadow-md lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static bg-zinc-200 dark:bg-zinc-900 lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
         {
           Links.map((link)=>(
             <li key={link.name} className='lg:ml-8 text-xl lg:my-0 my-7'>
-              <a href={link.link} onClick={() => scrollTo(link.name)} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</a>
+              <a href={link.link} onClick={() => scrollTo(link.name)} className={`text-gray-800 hover:text-zinc-600 duration-500 dark:text-white`}>{link.name}</a>
             </li>
           ))
         }
-        <ResumeDownloadButton />
+        <ResumeDownloadButton {...mode}/>
       </ul>
       </div>
     </div>

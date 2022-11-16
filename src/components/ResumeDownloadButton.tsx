@@ -1,32 +1,31 @@
-import React, { FC, useState, useEffect } from 'react'
-import downloadIconUrl from '../assets/images/download-icon-light.svg';
-import downloadDarkIconUrl from '../assets/images/download-icon-dark.svg';
+import React, { FC } from 'react'
 
-const ResumeDownloadButton: FC = () => {
+interface modeData {
+  modeType: string;
+  bulbIcon: string;
+  downloadIcon: string;
+  doubleDownIcon: string;
+  githubIcon: string;
+  linkedinIcon: string;
+  instagramIcon: string;   
+  hamburgerIcon: string; 
+  crossIcon: string;
+}
+
+const ResumeDownloadButton: FC<modeData> = (mode) => {
 
   const resumeLink : string | undefined = process.env.REACT_APP_RESUME_LINK;
-  const [downloadIcon, setDownloadIcon] = useState<string>(`${downloadIconUrl}`);
-
-  useEffect(() => {
-    if(localStorage.getItem("mode") === "dark") {
-      setDownloadIcon(`${downloadIconUrl}`)
-    }
-    else {
-      setDownloadIcon(`${downloadDarkIconUrl}`)
-    }
-    
-  }, [localStorage.getItem("mode")])
 
   return (
-      <div className="flex w-1/3 justify-center items-center">
-        <a href={resumeLink} className="flex gap-2 p-2 border-2 border-black dark:text-slate-50 dark:border-slate-50 rounded-md">
+      <div className="sm:flex w-32 sm:w-1/3 lg:justify-center items-center">
+        <a href={resumeLink} className="flex justify-center items-center gap-2 p-2 border-2 border-black dark:text-slate-50 dark:border-slate-50 rounded-md">
             <p className="font-semibold">
               Resume
             </p>
             <img
                   className="w-6"
                   alt="Download Icon"
-                  src={downloadIcon}
+                  src={mode.downloadIcon}
                 />
         </a>
       </div>

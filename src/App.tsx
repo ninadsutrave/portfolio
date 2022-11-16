@@ -13,21 +13,49 @@ import Contact from './pages/content/Contact'
 import Heading from './components/Heading'
 import Navbar from './components/Navbar'
 
-//importing bulb icons
+//importing icons
 import BulbOn from './assets/images/bulb-icon-on.svg'
 import BulbOff from './assets/images/bulb-icon-off.svg'
+import DownloadLight from './assets/images/download-icon-light.svg'
+import DownloadDark from './assets/images/download-icon-dark.svg'
+import DoubleDownLight from './assets/images/double-down-light.svg'
+import DoubleDownDark from './assets/images/double-down-dark.svg'
+import Github from './assets/images/github-light.svg';
+import GithubDark from './assets/images/github-dark.svg';
+import Linkedin from './assets/images/linkedin-light.svg';
+import LinkedinDark from './assets/images/linkedin-dark.svg';
+import Instagram from './assets/images/instagram-light.svg';
+import InstagramDark from './assets/images/instagram-dark.svg';
+import Hamburger from './assets/images/hamburger-light.svg';
+import HamburgerDark from './assets/images/hamburger-dark.svg';
+import Cross from './assets/images/cross-light.svg';
+import CrossDark from './assets/images/cross-dark.svg';
 
 
 const App:FC = ():ReactElement => {
 
   interface modeData {
-    modeType: string,
-    iconUrl: string
+    modeType: string;
+    bulbIcon: string;
+    downloadIcon: string;
+    doubleDownIcon: string;
+    githubIcon: string;
+    linkedinIcon: string;
+    instagramIcon: string;   
+    hamburgerIcon: string; 
+    crossIcon: string;
   }
 
   const [mode, setMode] = useState<modeData> ({
     modeType: "light",
-    iconUrl: `${BulbOn}`
+    bulbIcon: `${BulbOn}`,
+    downloadIcon: `${DownloadLight}`,
+    doubleDownIcon: `${DoubleDownLight}`,
+    githubIcon: `${Github}`,
+    linkedinIcon: `${Linkedin}`,
+    instagramIcon: `${Instagram}`,
+    hamburgerIcon: `${Hamburger}`,
+    crossIcon: `${Cross}`
   });
 
   useEffect(() => {
@@ -38,13 +66,27 @@ const App:FC = ():ReactElement => {
     if(mode.modeType === "light") {
       setMode({
         modeType: "dark",
-        iconUrl: `${BulbOff}`
+        bulbIcon: `${BulbOff}`,
+        downloadIcon: `${DownloadDark}`,
+        doubleDownIcon: `${DoubleDownDark}`,
+        githubIcon: `${GithubDark}`,
+        linkedinIcon: `${LinkedinDark}`,
+        instagramIcon: `${InstagramDark}`,
+        hamburgerIcon: `${HamburgerDark}`,
+        crossIcon: `${CrossDark}`
       })
     }
     else {
       setMode({
         modeType: "light",
-        iconUrl: `${BulbOn}`
+        bulbIcon: `${BulbOn}`,
+        downloadIcon: `${DownloadLight}`,
+        doubleDownIcon: `${DoubleDownLight}`,
+        githubIcon: `${Github}`,
+        linkedinIcon: `${Linkedin}`,
+        instagramIcon: `${Instagram}`,
+        hamburgerIcon: `${Hamburger}`,
+        crossIcon: `${Cross}`
       })
     }
   }
@@ -53,21 +95,21 @@ const App:FC = ():ReactElement => {
     <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll ${(mode.modeType === "light")? "bg-stone-200": "bg-zinc-900"} ${mode.modeType}`}>
 
       <img 
-        className= "fixed w-10 mt-4 ml-5 cursor-pointer z-50"
+        className= "fixed w-10 mt-4 ml-5 cursor-pointer z-70"
         alt="Bulb Icon"
-        src={mode.iconUrl} 
+        src={mode.bulbIcon} 
         onClick={switchMode}
       />
 
-      <PageTemplate pageName="LandingPage" children={<LandingPage/>}/>
+      <PageTemplate mode={mode} pageName="LandingPage" children={<LandingPage/>}/>
 
       <div>
-        <Heading />
+        <Heading {...mode}/>
         <Navbar/>
-        <PageTemplate pageName="Image"    children={<Intro/>}     />
-        <PageTemplate pageName="Work"     children={<Work/>}      />
-        <PageTemplate pageName="Projects" children={<Projects/>}  />
-        <PageTemplate pageName="Contact"  children={<Contact/>}   />
+        <PageTemplate mode={mode} pageName="Image"    children={<Intro/>}     />
+        <PageTemplate mode={mode} pageName="Work"     children={<Work/>}      />
+        <PageTemplate mode={mode} pageName="Projects" children={<Projects/>}  />
+        <PageTemplate mode={mode} pageName="Contact"  children={<Contact {...mode}/>}   />
       </div>
 
       

@@ -46,6 +46,7 @@ const Contact: FC<modeData> = (mode): ReactElement => {
     emailjs.sendForm(ServiceID, TemplateID, form.current!, UserID)
       .then((result) => {
           console.log('Success');
+          alert("Thank you for your visiting!");
       }, (error) => {
           console.log(error);
       });
@@ -60,7 +61,7 @@ const Contact: FC<modeData> = (mode): ReactElement => {
 
   return (
     <div className="flex flex-col justify-center ml-2 sm:ml-8 gap-5 mb-8 lg:w-8/12 z-30">
-      <h1 className="text-xl font-black mt-4 dark:text-slate-50">
+      <h1 className="text-xl sm:text-2xl font-black mt-4 dark:text-slate-50">
         Wanna make something awesome? <br /> Let's Chat!
       </h1>
       <form className="flex flex-col gap-6" ref={form} onSubmit={sendEmail}>

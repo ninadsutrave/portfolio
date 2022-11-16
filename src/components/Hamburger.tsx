@@ -34,7 +34,7 @@ const Nav:FC<modeData> = (mode) => {
 
   return (
     <div className={`w-full fixed top-0 left-0 lg:hidden z-80 dark:bg-zinc-900 ${localStorage.getItem("mode") === "dark"?"darkMode":"lightMode"}`}>
-      <div className='lg:flex h-0 items-center justify-between bg-zinc-200 dark:bg-zinc-900 py-4 lg:px-10 px-7'>
+      <div className={`lg:flex h-0 items-center justify-between bg-zinc-200 dark:bg-zinc-900 py-4 lg:px-10 px-7 ${localStorage.getItem("mode") === "dark"?"darkMode":"lightMode"}`}>
       
       <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer lg:hidden'>
       {open ? <img className="mt-3 mr-1 w-6" alt="close icon" src={mode.crossIcon}/>: <img className="mt-2 w-8" alt="hamburger icon" src={mode.hamburgerIcon}/>}

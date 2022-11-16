@@ -4,7 +4,7 @@ import MyImage from '../../assets/images/me.jpg'
 const Intro: FC = (): ReactElement => {
 
   return (
-    <div className="flex flex-col sm:flex-row ml-4 lg:ml-12 sm:gap-20 lg:gap-0">
+    <div className="flex flex-col sm:flex-row ml-4 lg:ml-12 sm:gap-20 lg:gap-0 xl:gap-20">
       <div className="flex lg:w-80 items-center w-full sm:w-56">
         <div className="border border-black mt-4 w-full max-w-xs sm:w-64 sm:h-full lg:mb-4">
           <img
@@ -14,10 +14,10 @@ const Intro: FC = (): ReactElement => {
           />
         </div>
       </div>
-      <div className="flex flex-col sm:justify-center py-2 sm:py-8 gap-4 lg:w-96">
+      <div className="mt-6 mb-2 xs:mt-0 xs:mb-0 flex flex-col sm:justify-center py-2 sm:py-8 gap-4 lg:w-96">
 
         <p className="text-gray-500">
-            &lt; Intro &gt;
+            &lt; Greeting &gt;
         </p>
 
           <div className="flex flex-col sm:gap-8 ml-2 sm:ml-4 md:ml-8">
@@ -33,7 +33,7 @@ const Intro: FC = (): ReactElement => {
           </div>
 
         <p className="text-gray-500">
-          &lt;/ Intro &gt;
+          &lt;/ Greeting &gt;
         </p>
 
       </div>

@@ -17,7 +17,7 @@ const ResumeDownloadButton: FC<modeData> = (mode) => {
   const resumeLink : string | undefined = process.env.REACT_APP_RESUME_LINK;
 
   return (
-      <div className="sm:flex w-32 sm:w-1/3 lg:justify-center items-center">
+      <div className="sm:flex w-32 sm:w-3/12 items-center">
         <a href={resumeLink} className="flex justify-center items-center gap-2 p-2 border-2 border-black dark:text-slate-50 dark:border-slate-50 rounded-md">
             <p className="font-semibold">
               Resume
@@ -26,7 +26,7 @@ const ResumeDownloadButton: FC<modeData> = (mode) => {
                   className="w-6"
                   alt="Download Icon"
                   src={mode.downloadIcon}
-                />
+            />
         </a>
       </div>
   )

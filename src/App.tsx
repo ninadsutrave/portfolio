@@ -2,24 +2,25 @@ import React, { FC, ReactElement, useState, useEffect } from 'react';
 import './App.css';
 
 //import sections
-import PageTemplate from './pages/PageTemplate'
-import LandingPage from './pages/content/LandingPage'
-import Intro from './pages/content/Intro'
-import Work from './pages/content/Work'
-import Projects from './pages/content/Projects'
-import Contact from './pages/content/Contact'
+import PageTemplate from './pages/PageTemplate';
+import LandingPage from './pages/content/LandingPage';
+import Intro from './pages/content/Intro';
+import About from './pages/content/About';
+import Work from './pages/content/Work';
+import Projects from './pages/content/Projects';
+import Contact from './pages/content/Contact';
 
 //importing components
-import Heading from './components/Heading'
-import Navbar from './components/Navbar'
+import Heading from './components/Heading';
+import Navbar from './components/Navbar';
 
 //importing icons
-import BulbOn from './assets/images/bulb-icon-on.svg'
-import BulbOff from './assets/images/bulb-icon-off.svg'
-import DownloadLight from './assets/images/download-icon-light.svg'
-import DownloadDark from './assets/images/download-icon-dark.svg'
-import DoubleDownLight from './assets/images/double-down-light.svg'
-import DoubleDownDark from './assets/images/double-down-dark.svg'
+import BulbOn from './assets/images/bulb-icon-on.svg';
+import BulbOff from './assets/images/bulb-icon-off.svg';
+import DownloadLight from './assets/images/download-icon-light.svg';
+import DownloadDark from './assets/images/download-icon-dark.svg';
+import DoubleDownLight from './assets/images/double-down-light.svg';
+import DoubleDownDark from './assets/images/double-down-dark.svg';
 import Github from './assets/images/github-light.svg';
 import GithubDark from './assets/images/github-dark.svg';
 import Linkedin from './assets/images/linkedin-light.svg';
@@ -106,9 +107,10 @@ const App:FC = ():ReactElement => {
       <div>
         <Heading {...mode}/>
         <Navbar/>
-        <PageTemplate mode={mode} pageName="Image"    children={<Intro/>}     />
-        <PageTemplate mode={mode} pageName="Work"     children={<Work/>}      />
-        <PageTemplate mode={mode} pageName="Projects" children={<Projects/>}  />
+        <PageTemplate mode={mode} pageName="Intro"    children={<Intro/>}               />
+        <PageTemplate mode={mode} pageName="About"    children={<About/>}               />
+        <PageTemplate mode={mode} pageName="Work"     children={<Work/>}                />
+        <PageTemplate mode={mode} pageName="Projects" children={<Projects/>}            />
         <PageTemplate mode={mode} pageName="Contact"  children={<Contact {...mode}/>}   />
       </div>
 

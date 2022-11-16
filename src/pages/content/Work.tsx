@@ -1,12 +1,9 @@
 import React, { FC, ReactElement } from 'react';
-import Skills from '../../components/Skills'
 import Job from '../../components/Job'
 
 const Work: FC = (): ReactElement => {
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-8 ml-8">
-
+    <div className="flex flex-col gap-4 sm:gap-12 md:ml-8 py-8 ml-6 md:py-0">
         <Job
           company="Tech IndusOne"
           position="Full Stack Developer Intern"
@@ -22,24 +19,6 @@ const Work: FC = (): ReactElement => {
           endDate="Apr 2022"
           descp={["Worked on the development and deployment of an online music education and collaboration platform", "Designed and implemented the application’s primary APIs, databases,  and other functionalities from scratch"]}
         />
-
-      </div>
-      <div className="ml-8">
-        <p className="text-gray-500">
-            &lt; Skills &gt;
-        </p>
-
-        <div className="ml-4 py-1">
-          <Skills type="Languages" list={["C,", "C++,", "JavaScript,", "Typescript,", "JAVA"]} />
-          <Skills type="Front End" list={["HTML,", "CSS,", "Tailwind,", "Bootstrap,", "React,", "Redux"]} />
-          <Skills type="Back End" list={["NodeJS,", "Express,", "MongoDB,", "PostgreSQL,", "Firebase"]} />
-          <Skills type="Design" list={["Figma,", "Adobe XD"]} />
-        </div>
-
-        <p className="text-gray-500">
-          &lt;/ Skills &gt;
-        </p>
-      </div>
     </div>
   )
 }

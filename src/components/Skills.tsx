@@ -9,16 +9,16 @@ const Skills: FC<Skillset> = ({type, list}: Skillset) => {
 
   return (
     <div className="flex gap-8">
-      <header className="font-bold w-2/12 dark:text-slate-50">
+      <header className="font-bold text-sm sm:text-base w-2/12 dark:text-slate-50">
           {type}:
       </header>
-      <p className="flex">
+      <div className="flex w-3/4">
           {
               list.map((skill, index) => {
                   return <span key={`skill-${index}`} className="mr-2  dark:text-zinc-300">{skill}</span>
               })
           }
-      </p>
+      </div>
     </div>
   )
 }

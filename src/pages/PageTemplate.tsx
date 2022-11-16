@@ -19,8 +19,9 @@ type Page = {
 };
 
 let nextPage = new Map<string, string>([
-  ["LandingPage", "Image"],
-  ["Image", "Work"],
+  ["LandingPage", "Intro"],
+  ["Intro", "About"],
+  ["About", "Work"],
   ["Work", "Projects"],
   ["Projects", "Contact"]
 ]);

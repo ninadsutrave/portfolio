@@ -15,14 +15,20 @@ const Navbar: FC = (): ReactElement => {
         <div className="h-4/6 border-2 bg-black border-black dark:bg-zinc-400 dark:border-zinc-400">
         </div>
         <div className="h-4/6 flex flex-col items-center justify-around">
-            <a className="cursor-pointer" href="#Image" onClick={() => scrollTo("Image")}>
+            <a className="cursor-pointer" href="#Intro" onClick={() => scrollTo("Intro")}>
             <div className="flex items-center justify-center gap-2 -ml-10">
                 <div className="w-4 h-4 rounded-full bg-zinc-400 border-4 border-black dark:border-zinc-900"></div>
                 <div className="text-gray-600 dark:text-zinc-300">&lt; Intro /&gt;</div>
             </div>
             </a>
+            <a className="cursor-pointer" href="#About" onClick={() => scrollTo("About")}>
+            <div className="flex items-center justify-center gap-2 -ml-7">
+                <div className="w-4 h-4 rounded-full bg-zinc-400 border-4 border-black dark:border-zinc-900"></div>
+                <div className="text-gray-600 dark:text-zinc-300">&lt; About /&gt;</div>
+            </div>
+            </a>
             <a className="cursor-pointer" href="#Work" onClick={() => scrollTo("Work")}>
-            <div className="flex items-center justify-center gap-2 -ml-10">
+            <div className="flex items-center justify-center gap-2 -ml-9">
                 <div className="w-4 h-4 rounded-full bg-zinc-400 border-4 border-black dark:border-zinc-900"></div>
                 <div className="text-gray-600 dark:text-zinc-300">&lt; Work /&gt;</div>
             </div>

@@ -13,7 +13,7 @@ interface JobInfo {
 const Job: FC<JobInfo> = ({company, position, startDate, endDate, descp}: JobInfo) => {
 
   return (
-    <div className="flex">
+    <div className="flex md:flex-row flex-col">
         <Role 
             company={company}
             position={position}

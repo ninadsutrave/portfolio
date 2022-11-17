@@ -45,10 +45,10 @@ const Contact: FC<modeData> = (mode): ReactElement => {
 
     emailjs.sendForm(ServiceID, TemplateID, form.current!, UserID)
       .then((result) => {
-          console.log('Success');
-          alert("Thank you for your visiting!");
+          //console.log('Success');
+          alert("Thank you for visiting!");
       }, (error) => {
-          console.log(error);
+          //console.log(error);
       });
 
     setFormDetails({

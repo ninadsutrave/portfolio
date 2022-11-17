@@ -39,7 +39,7 @@ const PageTemplate: FC<Page> = ({pageName, children, mode}: Page): ReactElement 
 
   return (
     
-    <section className="relative flex items-center justify-center h-screen  snap-center" id={`#${pageName}`}>
+    <section className="relative flex items-center justify-center h-screen max-h-screen snap-center" id={`#${pageName}`}>
 
         <div className="flex flex-col h-4/6 justify-between w-10/12">
 

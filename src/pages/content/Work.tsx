@@ -3,7 +3,7 @@ import Job from '../../components/Job'
 
 const Work: FC = (): ReactElement => {
   return (
-    <div className="flex flex-col gap-4 sm:gap-12 md:ml-8 py-8 ml-6 md:py-0">
+    <div className="flex flex-col gap-8 sm:gap-12 md:ml-8 py-8 ml-6 md:py-0">
         <Job
           company="Tech IndusOne"
           position="Full Stack Developer Intern"

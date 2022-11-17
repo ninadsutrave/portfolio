@@ -31,6 +31,16 @@ import Hamburger from './assets/images/hamburger-light.svg';
 import HamburgerDark from './assets/images/hamburger-dark.svg';
 import Cross from './assets/images/cross-light.svg';
 import CrossDark from './assets/images/cross-dark.svg';
+import Card1 from './assets/images/project-card-1.png';
+import Card1Dark from './assets/images/project-card-1-dark.png';
+import Card2 from './assets/images/project-card-2.png';
+import Card2Dark from './assets/images/project-card-2-dark.png';
+import Card3 from './assets/images/project-card-3.png';
+import Card3Dark from './assets/images/project-card-3-dark.png';
+import Card4 from './assets/images/project-card-4.png';
+import Card4Dark from './assets/images/project-card-4-dark.png';
+import Card5 from './assets/images/project-card-5.png';
+import Card5Dark from './assets/images/project-card-5-dark.png';
 
 
 const App:FC = ():ReactElement => {
@@ -45,6 +55,11 @@ const App:FC = ():ReactElement => {
     instagramIcon: string;   
     hamburgerIcon: string; 
     crossIcon: string;
+    card1: string;
+    card2: string;
+    card3: string;
+    card4: string;
+    card5: string;
   }
 
   const [mode, setMode] = useState<modeData> ({
@@ -56,7 +71,12 @@ const App:FC = ():ReactElement => {
     linkedinIcon: `${Linkedin}`,
     instagramIcon: `${Instagram}`,
     hamburgerIcon: `${Hamburger}`,
-    crossIcon: `${Cross}`
+    crossIcon: `${Cross}`,
+    card1: `${Card1}`,
+    card2: `${Card2}`,
+    card3: `${Card3}`,
+    card4: `${Card4}`,
+    card5: `${Card5}`
   });
 
   useEffect(() => {
@@ -74,7 +94,12 @@ const App:FC = ():ReactElement => {
         linkedinIcon: `${LinkedinDark}`,
         instagramIcon: `${InstagramDark}`,
         hamburgerIcon: `${HamburgerDark}`,
-        crossIcon: `${CrossDark}`
+        crossIcon: `${CrossDark}`,
+        card1: `${Card1Dark}`,
+        card2: `${Card2Dark}`,
+        card3: `${Card3Dark}`,
+        card4: `${Card4Dark}`,
+        card5: `${Card5Dark}`
       })
     }
     else {
@@ -87,7 +112,12 @@ const App:FC = ():ReactElement => {
         linkedinIcon: `${Linkedin}`,
         instagramIcon: `${Instagram}`,
         hamburgerIcon: `${Hamburger}`,
-        crossIcon: `${Cross}`
+        crossIcon: `${Cross}`,
+        card1: `${Card1}`,
+        card2: `${Card2}`,
+        card3: `${Card3}`,
+        card4: `${Card4}`,
+        card5: `${Card5}`
       })
     }
   }
@@ -110,7 +140,7 @@ const App:FC = ():ReactElement => {
         <PageTemplate mode={mode} pageName="Intro"    children={<Intro/>}               />
         <PageTemplate mode={mode} pageName="About"    children={<About/>}               />
         <PageTemplate mode={mode} pageName="Work"     children={<Work/>}                />
-        <PageTemplate mode={mode} pageName="Projects" children={<Projects/>}            />
+        <PageTemplate mode={mode} pageName="Projects" children={<Projects {...mode}/>}            />
         <PageTemplate mode={mode} pageName="Contact"  children={<Contact {...mode}/>}   />
       </div>
 

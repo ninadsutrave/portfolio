@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { FC, ReactElement } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -6,7 +6,16 @@ import "swiper/css/pagination";
 import "./Carousel.css";
 import { EffectCoverflow, Pagination } from "swiper";
 
-export default function App() {
+interface modeData {
+  modeType: string;
+  card1: string;
+  card2: string;
+  card3: string;
+  card4: string;
+  card5: string;
+}
+
+const Carousel:FC<modeData> = (mode): ReactElement => {
   return (
     <>
       <Swiper
@@ -28,31 +37,31 @@ export default function App() {
         
         <SwiperSlide>
           <a href="https://pehchaan.netlify.app" target="_blank" rel="noreferrer">
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <img src={mode.card1} alt="View Project"/>
           </a>
         </SwiperSlide>
       
         <SwiperSlide>
           <a href="https://teetsy.netlify.app" target="_blank" rel="noreferrer">
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <img src={mode.card2} alt="View Project"/>
           </a>
         </SwiperSlide>
 
         <SwiperSlide>
           <a href="https://midday.netlify.app" target="_blank" rel="noreferrer">
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <img src={mode.card3} alt="View Project"/>
           </a>
         </SwiperSlide>
 
         <SwiperSlide>
           <a href="https://chrome.google.com/webstore/detail/lookup-personal-vocabular/lamkbakfmcoaibacdbpgejffopbhhpgn?hl=en" target="_blank" rel="noreferrer">
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            <img src={mode.card4} alt="View Project"/>
           </a>
         </SwiperSlide>
 
         <SwiperSlide>
           <a href="https://typemaster1234.netlify.app" target="_blank" rel="noreferrer">
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            <img src={mode.card5} alt="View Project"/>
           </a>
         </SwiperSlide>
 
@@ -61,3 +70,5 @@ export default function App() {
     </>
   );
 }
+
+export default Carousel;

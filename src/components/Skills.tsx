@@ -14,7 +14,7 @@ const Skills: FC<Skillset> = ({type, list}: Skillset) => {
 
   return (
     <div className="flex sm:gap-0 gap-4">
-      <header className="font-bold text-sm sm:text-base w-4/12 dark:text-zinc-300">
+      <header className="font-bold text-sm sm:text-base w-4/12 sm:w-2/12 dark:text-zinc-300">
           {type}:
       </header>
       <div className="flex w-3/4 sm:ml-0 lg:-ml-4">

@@ -15,7 +15,8 @@ interface modeData {
 
 const Nav:FC<modeData> = (mode) => {
     let Links =[
-      {name:"Intro",link:"#Image"},
+      {name:"Intro",link:"#Intro"},
+      {name:"About",link:"#About"},
       {name:"Work",link:"#Work"},
       {name:"Projects",link:"#Projects"},
       {name:"Contact",link:"#Contact"},

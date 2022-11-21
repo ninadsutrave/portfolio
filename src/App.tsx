@@ -31,16 +31,16 @@ import Hamburger from './assets/images/hamburger-light.svg';
 import HamburgerDark from './assets/images/hamburger-dark.svg';
 import Cross from './assets/images/cross-light.svg';
 import CrossDark from './assets/images/cross-dark.svg';
-import Card1 from './assets/images/project-card-1.png';
-import Card1Dark from './assets/images/project-card-1-dark.png';
-import Card2 from './assets/images/project-card-2.png';
-import Card2Dark from './assets/images/project-card-2-dark.png';
-import Card3 from './assets/images/project-card-3.png';
-import Card3Dark from './assets/images/project-card-3-dark.png';
-import Card4 from './assets/images/project-card-4.png';
-import Card4Dark from './assets/images/project-card-4-dark.png';
-import Card5 from './assets/images/project-card-5.png';
-import Card5Dark from './assets/images/project-card-5-dark.png';
+import Card1 from './assets/images/test-card-1.png';
+import Card1Dark from './assets/images/test-card-1-dark.png';
+import Card2 from './assets/images/test-card-2.png';
+import Card2Dark from './assets/images/test-card-2-dark.png';
+import Card3 from './assets/images/test-card-3.png';
+import Card3Dark from './assets/images/test-card-3-dark.png';
+import Card4 from './assets/images/test-card-4.png';
+import Card4Dark from './assets/images/test-card-4-dark.png';
+import Card5 from './assets/images/test-card-5.png';
+import Card5Dark from './assets/images/test-card-5-dark.png';
 
 
 const App:FC = ():ReactElement => {

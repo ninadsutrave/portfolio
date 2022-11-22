@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import MyImage from '../../assets/images/me.jpg'
+import MyImage from '../../assets/images/me.webp'
 
 const Intro: FC = (): ReactElement => {
 

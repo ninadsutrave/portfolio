@@ -25,22 +25,24 @@ import Github from './assets/images/github-light.svg';
 import GithubDark from './assets/images/github-dark.svg';
 import Linkedin from './assets/images/linkedin-light.svg';
 import LinkedinDark from './assets/images/linkedin-dark.svg';
+import Dribbble from './assets/images/dribbble-light.svg';
+import DribbbleDark from './assets/images/dribbble-dark.svg';
 import Instagram from './assets/images/instagram-light.svg';
 import InstagramDark from './assets/images/instagram-dark.svg';
 import Hamburger from './assets/images/hamburger-light.svg';
 import HamburgerDark from './assets/images/hamburger-dark.svg';
 import Cross from './assets/images/cross-light.svg';
 import CrossDark from './assets/images/cross-dark.svg';
-import Card1 from './assets/images/test-card-1.webp';
-import Card1Dark from './assets/images/test-card-1-dark.webp';
-import Card2 from './assets/images/test-card-2.webp';
-import Card2Dark from './assets/images/test-card-2-dark.webp';
-import Card3 from './assets/images/test-card-3.webp';
-import Card3Dark from './assets/images/test-card-3-dark.webp';
-import Card4 from './assets/images/test-card-4.webp';
-import Card4Dark from './assets/images/test-card-4-dark.webp';
-import Card5 from './assets/images/test-card-5.webp';
-import Card5Dark from './assets/images/test-card-5-dark.webp';
+import Card1 from './assets/images/project-card-1.webp';
+import Card1Dark from './assets/images/project-card-1-dark.webp';
+import Card2 from './assets/images/project-card-2.webp';
+import Card2Dark from './assets/images/project-card-2-dark.webp';
+import Card3 from './assets/images/project-card-3.webp';
+import Card3Dark from './assets/images/project-card-3-dark.webp';
+import Card4 from './assets/images/project-card-4.webp';
+import Card4Dark from './assets/images/project-card-4-dark.webp';
+import Card5 from './assets/images/project-card-5.webp';
+import Card5Dark from './assets/images/project-card-5-dark.webp';
 
 
 const App:FC = ():ReactElement => {
@@ -52,6 +54,7 @@ const App:FC = ():ReactElement => {
     doubleDownIcon: string;
     githubIcon: string;
     linkedinIcon: string;
+    dribbbleIcon: string;
     instagramIcon: string;   
     hamburgerIcon: string; 
     crossIcon: string;
@@ -69,6 +72,7 @@ const App:FC = ():ReactElement => {
     doubleDownIcon: `${DoubleDownLight}`,
     githubIcon: `${Github}`,
     linkedinIcon: `${Linkedin}`,
+    dribbbleIcon: `${Dribbble}`,
     instagramIcon: `${Instagram}`,
     hamburgerIcon: `${Hamburger}`,
     crossIcon: `${Cross}`,
@@ -92,6 +96,7 @@ const App:FC = ():ReactElement => {
         doubleDownIcon: `${DoubleDownDark}`,
         githubIcon: `${GithubDark}`,
         linkedinIcon: `${LinkedinDark}`,
+        dribbbleIcon: `${DribbbleDark}`,
         instagramIcon: `${InstagramDark}`,
         hamburgerIcon: `${HamburgerDark}`,
         crossIcon: `${CrossDark}`,
@@ -110,6 +115,7 @@ const App:FC = ():ReactElement => {
         doubleDownIcon: `${DoubleDownLight}`,
         githubIcon: `${Github}`,
         linkedinIcon: `${Linkedin}`,
+        dribbbleIcon: `${Dribbble}`,
         instagramIcon: `${Instagram}`,
         hamburgerIcon: `${Hamburger}`,
         crossIcon: `${Cross}`,

@@ -10,6 +10,7 @@ interface modeData {
   linkedinIcon: string;
   instagramIcon: string;
   hamburgerIcon: string;
+  dribbbleIcon: string;
   crossIcon: string;
 }
 
@@ -109,7 +110,7 @@ const Contact: FC<modeData> = (mode): ReactElement => {
           <p className="flex justify-center items-center font-black text-xl dark:text-gray-400">
             OR
           </p>
-          <p className="flex gap-1 sm:gap-3 justify-center items-center">
+          <p className="flex gap-2 sm:gap-3 justify-center items-center">
             <a
               className="cursor-pointer"
               href="https://github.com/NinadSutrave"
@@ -129,6 +130,17 @@ const Contact: FC<modeData> = (mode): ReactElement => {
               <img
                 className="w-9 sm:w-11"
                 src={mode.linkedinIcon}
+                alt="Github Icon"
+              />
+            </a>
+            <a
+              className="cursor-pointer"
+              href="https://dribbble.com/ninadsutrave"
+              target="_blank" rel="noreferrer"
+            >
+              <img
+                className="w-7 sm:w-9"
+                src={mode.dribbbleIcon}
                 alt="Github Icon"
               />
             </a>

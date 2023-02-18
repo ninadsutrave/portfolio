@@ -2,9 +2,18 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "author": "Ninad Sutrave",
+  "author": {
+    "name": "Ninad Sutrave",
+    "email": "ninadsutrave@gmail.com",
+    "url": "https://ninadsutrave.in"
+  },
   "license": "MIT",
-  "keywords": ["Portfolio", "Web Portfolio", "Developer", "Full Stack Developer", "Website Application"],
+  "keywords": ["Portfolio", 
+               "Web Portfolio", 
+               "Developer", 
+               "Software Developer",
+               "Full Stack Developer", 
+               "Website Application"],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",

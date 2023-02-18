@@ -14,14 +14,16 @@ interface modeData {
 }
 
 const Nav:FC<modeData> = (mode) => {
-    let Links =[
+
+    const Links =[
       {name:"Intro",link:"#Intro"},
       {name:"About",link:"#About"},
       {name:"Work",link:"#Work"},
       {name:"Projects",link:"#Projects"},
       {name:"Contact",link:"#Contact"},
     ];
-    let [open,setOpen]=useState(false);
+
+    const [open,setOpen] = useState(false);
 
     const scrollTo = (nextPage: string | undefined) => {
       setOpen(false)

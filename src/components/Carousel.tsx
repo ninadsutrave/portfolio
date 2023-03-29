@@ -13,6 +13,7 @@ interface modeData {
   card3: string;
   card4: string;
   card5: string;
+  card6: string;
 }
 
 const Carousel:FC<modeData> = (mode): ReactElement => {
@@ -34,6 +35,12 @@ const Carousel:FC<modeData> = (mode): ReactElement => {
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
+
+        <SwiperSlide>
+          <a href="https://www.npmjs.com/package/react-fancy-circular-carousel" target="_blank" rel="noreferrer">
+            <img src={mode.card6} alt="View Project"/>
+          </a>
+        </SwiperSlide>
         
         <SwiperSlide>
           <a href="https://pehchaan.netlify.app" target="_blank" rel="noreferrer">

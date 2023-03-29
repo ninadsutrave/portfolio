@@ -7,3 +7,7 @@ Welcome to my web portfolio! Do visit and let me know how it is!
 [View on Dribbble](https://dribbble.com/shots/20651347-Web-Portfolio)
 
 Hope you like it!
+
+# License
+
+MIT © [Ninad Sutrave](https://ninadsutrave.in)

@@ -8,6 +8,7 @@ interface modeData {
   card3: string;
   card4: string;
   card5: string;
+  card6: string;
 }
 
 const Projects: FC<modeData> = (mode): ReactElement => {

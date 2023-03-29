@@ -43,6 +43,8 @@ import Card4 from './assets/images/project-card-4.webp';
 import Card4Dark from './assets/images/project-card-4-dark.webp';
 import Card5 from './assets/images/project-card-5.webp';
 import Card5Dark from './assets/images/project-card-5-dark.webp';
+import Card6 from './assets/images/project-card-6.webp';
+import Card6Dark from './assets/images/project-card-6-dark.webp';
 
 
 const App:FC = ():ReactElement => {
@@ -63,6 +65,7 @@ const App:FC = ():ReactElement => {
     card3: string;
     card4: string;
     card5: string;
+    card6: string;
   }
 
   const [mode, setMode] = useState<modeData> ({
@@ -80,7 +83,8 @@ const App:FC = ():ReactElement => {
     card2: `${Card2}`,
     card3: `${Card3}`,
     card4: `${Card4}`,
-    card5: `${Card5}`
+    card5: `${Card5}`,
+    card6: `${Card6}`
   });
 
   useEffect(() => {
@@ -104,7 +108,8 @@ const App:FC = ():ReactElement => {
         card2: `${Card2Dark}`,
         card3: `${Card3Dark}`,
         card4: `${Card4Dark}`,
-        card5: `${Card5Dark}`
+        card5: `${Card5Dark}`,
+        card6: `${Card6Dark}`
       })
     }
     else {
@@ -123,7 +128,8 @@ const App:FC = ():ReactElement => {
         card2: `${Card2}`,
         card3: `${Card3}`,
         card4: `${Card4}`,
-        card5: `${Card5}`
+        card5: `${Card5}`,
+        card6: `${Card6}`
       })
     }
   }

@@ -37,7 +37,7 @@ const Carousel:FC<modeData> = (mode): ReactElement => {
       >
 
         <SwiperSlide>
-          <a href="https://www.censorify.netlify.app" target="_blank" rel="noreferrer">
+          <a href="https://censorify.netlify.app" target="_blank" rel="noreferrer">
             <img src={mode.card1} alt="View Project"/>
           </a>
         </SwiperSlide>

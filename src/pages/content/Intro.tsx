@@ -8,7 +8,7 @@ const Intro: FC = (): ReactElement => {
       <div className="flex lg:w-80 items-center w-full sm:w-56">
         <div className="border border-black mt-4 w-full max-w-xs sm:w-64 sm:h-full lg:mb-4">
           <img
-            className="border-slate-300 shadow-sm border-8 sm:h-full object-cover"
+            className="border-slate-300 shadow-sm border-8 sm:min-h-full object-cover"
             src={MyImage}
             alt="Me"
           />

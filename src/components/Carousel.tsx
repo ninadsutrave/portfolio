@@ -37,38 +37,38 @@ const Carousel:FC<modeData> = (mode): ReactElement => {
       >
 
         <SwiperSlide>
-          <a href="https://www.npmjs.com/package/react-fancy-circular-carousel" target="_blank" rel="noreferrer">
-            <img src={mode.card6} alt="View Project"/>
+          <a href="https://www.censorify.netlify.app" target="_blank" rel="noreferrer">
+            <img src={mode.card1} alt="View Project"/>
           </a>
         </SwiperSlide>
         
         <SwiperSlide>
-          <a href="https://pehchaan.netlify.app" target="_blank" rel="noreferrer">
-            <img src={mode.card1} alt="View Project"/>
+          <a href="https://www.npmjs.com/package/react-fancy-circular-carousel" target="_blank" rel="noreferrer">
+            <img src={mode.card2} alt="View Project"/>
           </a>
         </SwiperSlide>
       
         <SwiperSlide>
-          <a href="https://teetsy.netlify.app" target="_blank" rel="noreferrer">
-            <img src={mode.card2} alt="View Project"/>
-          </a>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <a href="https://midday.netlify.app" target="_blank" rel="noreferrer">
+          <a href="https://pehchaan.netlify.app" target="_blank" rel="noreferrer">
             <img src={mode.card3} alt="View Project"/>
           </a>
         </SwiperSlide>
 
         <SwiperSlide>
-          <a href="https://chrome.google.com/webstore/detail/lookup-personal-vocabular/lamkbakfmcoaibacdbpgejffopbhhpgn?hl=en" target="_blank" rel="noreferrer">
+          <a href="https://teetsy.netlify.app" target="_blank" rel="noreferrer">
             <img src={mode.card4} alt="View Project"/>
           </a>
         </SwiperSlide>
 
         <SwiperSlide>
-          <a href="https://typemaster1234.netlify.app" target="_blank" rel="noreferrer">
+          <a href="https://chrome.google.com/webstore/detail/lookup-personal-vocabular/lamkbakfmcoaibacdbpgejffopbhhpgn?hl=en" target="_blank" rel="noreferrer">
             <img src={mode.card5} alt="View Project"/>
+          </a>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <a href="https://typemaster1234.netlify.app" target="_blank" rel="noreferrer">
+            <img src={mode.card6} alt="View Project"/>
           </a>
         </SwiperSlide>
 

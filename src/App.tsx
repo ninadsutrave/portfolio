@@ -33,6 +33,8 @@ import Hamburger from './assets/images/hamburger-light.svg';
 import HamburgerDark from './assets/images/hamburger-dark.svg';
 import Cross from './assets/images/cross-light.svg';
 import CrossDark from './assets/images/cross-dark.svg';
+
+//importing project cards
 import Card1 from './assets/images/project-card-1.webp';
 import Card1Dark from './assets/images/project-card-1-dark.webp';
 import Card2 from './assets/images/project-card-2.webp';
@@ -136,16 +138,13 @@ const App:FC = ():ReactElement => {
 
   return (
     <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll ${(mode.modeType === "light")? "bg-stone-200": "bg-zinc-900"} ${mode.modeType}`}>
-
       <img 
         className= "fixed w-10 mt-4 ml-5 cursor-pointer z-70"
         alt="Bulb Icon"
         src={mode.bulbIcon} 
         onClick={switchMode}
       />
-
       <PageTemplate mode={mode} pageName="LandingPage" children={<LandingPage/>}/>
-
       <div>
         <Heading {...mode}/>
         <Navbar/>
@@ -155,8 +154,6 @@ const App:FC = ():ReactElement => {
         <PageTemplate mode={mode} pageName="Projects" children={<Projects {...mode}/>}            />
         <PageTemplate mode={mode} pageName="Contact"  children={<Contact {...mode}/>}   />
       </div>
-
-      
     </div>
   );
 }

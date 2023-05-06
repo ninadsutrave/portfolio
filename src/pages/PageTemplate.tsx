@@ -3,7 +3,7 @@ import React, { FC, ReactElement } from 'react';
 interface modeData {
   modeType: string;
   bulbIcon: string;
-  downloadIcon: string;
+  newTabIcon: string;
   doubleDownIcon: string;
   githubIcon: string;
   linkedinIcon: string;
@@ -64,7 +64,6 @@ const PageTemplate: FC<Page> = ({pageName, children, mode}: Page): ReactElement 
             />
           </a>:null
         }
-
     </section>
   )
 }

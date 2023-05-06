@@ -4,7 +4,7 @@ import ResumeDownloadButton from './ResumeDownloadButton';
 interface modeData {
   modeType: string;
   bulbIcon: string;
-  downloadIcon: string;
+  newTabIcon: string;
   doubleDownIcon: string;
   githubIcon: string;
   linkedinIcon: string;

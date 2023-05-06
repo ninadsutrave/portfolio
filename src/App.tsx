@@ -17,8 +17,8 @@ import Navbar from './components/Navbar';
 //importing icons
 import BulbOn from './assets/images/bulb-icon-on.svg';
 import BulbOff from './assets/images/bulb-icon-off.svg';
-import DownloadLight from './assets/images/download-icon-light.svg';
-import DownloadDark from './assets/images/download-icon-dark.svg';
+import NewTabLight from './assets/images/new-tab-light.svg';
+import NewTabDark from './assets/images/new-tab-dark.svg';
 import DoubleDownLight from './assets/images/double-down-light.svg';
 import DoubleDownDark from './assets/images/double-down-dark.svg';
 import Github from './assets/images/github-light.svg';
@@ -54,7 +54,7 @@ const App:FC = ():ReactElement => {
   interface modeData {
     modeType: string;
     bulbIcon: string;
-    downloadIcon: string;
+    newTabIcon: string;
     doubleDownIcon: string;
     githubIcon: string;
     linkedinIcon: string;
@@ -73,7 +73,7 @@ const App:FC = ():ReactElement => {
   const [mode, setMode] = useState<modeData> ({
     modeType: "light",
     bulbIcon: `${BulbOn}`,
-    downloadIcon: `${DownloadLight}`,
+    newTabIcon: `${NewTabLight}`,
     doubleDownIcon: `${DoubleDownLight}`,
     githubIcon: `${Github}`,
     linkedinIcon: `${Linkedin}`,
@@ -98,7 +98,7 @@ const App:FC = ():ReactElement => {
       setMode({
         modeType: "dark",
         bulbIcon: `${BulbOff}`,
-        downloadIcon: `${DownloadDark}`,
+        newTabIcon: `${NewTabDark}`,
         doubleDownIcon: `${DoubleDownDark}`,
         githubIcon: `${GithubDark}`,
         linkedinIcon: `${LinkedinDark}`,
@@ -118,7 +118,7 @@ const App:FC = ():ReactElement => {
       setMode({
         modeType: "light",
         bulbIcon: `${BulbOn}`,
-        downloadIcon: `${DownloadLight}`,
+        newTabIcon: `${NewTabLight}`,
         doubleDownIcon: `${DoubleDownLight}`,
         githubIcon: `${Github}`,
         linkedinIcon: `${Linkedin}`,
@@ -136,10 +136,6 @@ const App:FC = ():ReactElement => {
     }
   }
 
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-
   return (
     <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll ${(mode.modeType === "light")? "bg-stone-200": "bg-zinc-900"} ${mode.modeType}`}>
       <img 
@@ -152,11 +148,11 @@ const App:FC = ():ReactElement => {
       <div>
         <Heading {...mode}/>
         <Navbar/>
-        <PageTemplate mode={mode} pageName="Intro"    children={<Intro/>}               />
-        <PageTemplate mode={mode} pageName="About"    children={<About/>}               />
-        <PageTemplate mode={mode} pageName="Work"     children={<Work/>}                />
-        <PageTemplate mode={mode} pageName="Projects" children={<Projects {...mode}/>}            />
-        <PageTemplate mode={mode} pageName="Contact"  children={<Contact {...mode}/>}   />
+        <PageTemplate mode={mode} pageName="Intro"    children={<Intro/>} />
+        <PageTemplate mode={mode} pageName="About"    children={<About/>} />
+        <PageTemplate mode={mode} pageName="Work"     children={<Work/>} />
+        <PageTemplate mode={mode} pageName="Projects" children={<Projects {...mode}/>} />
+        <PageTemplate mode={mode} pageName="Contact"  children={<Contact {...mode}/>} />
       </div>
     </div>
   );

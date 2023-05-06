@@ -3,15 +3,10 @@ import emailjs from 'emailjs-com';
 
 interface modeData {
   modeType: string;
-  bulbIcon: string;
-  downloadIcon: string;
-  doubleDownIcon: string;
   githubIcon: string;
   linkedinIcon: string;
   instagramIcon: string;
-  hamburgerIcon: string;
   dribbbleIcon: string;
-  crossIcon: string;
 }
 
 const Contact: FC<modeData> = (mode): ReactElement => {

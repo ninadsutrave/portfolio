@@ -3,7 +3,7 @@ import { FC } from 'react'
 interface modeData {
   modeType: string;
   bulbIcon: string;
-  downloadIcon: string;
+  newTabIcon: string;
   doubleDownIcon: string;
   githubIcon: string;
   linkedinIcon: string;
@@ -21,9 +21,9 @@ const ResumeDownloadButton: FC<modeData> = (mode) => {
               Resume
             </p>
             <img
-                  className="w-6"
+                  className="w-5"
                   alt="Download Icon"
-                  src={mode.downloadIcon}
+                  src={mode.newTabIcon}
             />
         </a>
       </div>

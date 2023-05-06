@@ -136,6 +136,10 @@ const App:FC = ():ReactElement => {
     }
   }
 
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div className= {`App w-full h-screen snap-y snap-mandatory overflow-y-scroll ${(mode.modeType === "light")? "bg-stone-200": "bg-zinc-900"} ${mode.modeType}`}>
       <img 

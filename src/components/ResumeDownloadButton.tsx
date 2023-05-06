@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 interface modeData {
   modeType: string;
@@ -13,8 +13,6 @@ interface modeData {
 }
 
 const ResumeDownloadButton: FC<modeData> = (mode) => {
-
-  const resumeLink : string | undefined = process.env.REACT_APP_RESUME_LINK;
 
   return (
       <div className="sm:flex w-32 sm:w-3/12 items-center">
